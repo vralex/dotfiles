@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
@@ -29,5 +30,8 @@ set noesckeys
 
 set incsearch
 
+set splitbelow
+
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
