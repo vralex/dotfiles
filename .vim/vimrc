@@ -1,0 +1,25 @@
+set nocompatible
+filetype plugin on
+
+runtime macros/matchit.vim
+" surround.vim
+" commentary
+
+syntax on
+
+set number
+set mouse=a
+
+set autoindent
+set smartindent
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+set noesckeys
+
+set incsearch
+
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
