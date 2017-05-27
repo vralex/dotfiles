@@ -1,9 +1,17 @@
 set nocompatible
-filetype plugin on
+filetype off
 
-runtime macros/matchit.vim
-" surround.vim
-" commentary
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'scrooloose/nerdtree'
+
+call vundle#end()
+
+filetype plugin indent on
 
 syntax on
 
