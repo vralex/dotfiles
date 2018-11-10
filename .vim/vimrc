@@ -1,23 +1,15 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
-
-call vundle#end()
-
 filetype plugin indent on
 
 syntax on
 
 set number
 set mouse=a
+if has('mouse_sgr')
+    set ttymouse=sgr
+endif
 
 set autoindent
 set smartindent
@@ -29,9 +21,3 @@ set expandtab
 set noesckeys
 
 set incsearch
-
-set splitbelow
-
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-
-autocmd FileType c,cpp,cs,java setlocal commentstring=//\ %s
